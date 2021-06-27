@@ -1,10 +1,7 @@
-const { resolveNaptr } = require("dns");
-const { response } = require("express");
-const { REPL_MODE_SLOPPY } = require("repl");
-
 const $animalForm = document.querySelector('#animal-form');
+const $zookeeperForm = document.querySelector('#zookeeper-form');
 
-const handleGetAnimalsSubmit = event => {
+const handleAnimalFormSubmit = event => {
   event.preventDefault();
 
   // get animal data and organize it
@@ -42,12 +39,12 @@ const handleGetAnimalsSubmit = event => {
       if (response.ok) {
         return response.json();
       }
-      alert('Error: ' + response.statusText);
+      alert(`Error: ${response.statusText}`);
     })
     .then(postResponse => {
       console.log(postResponse);
       alert('Thank you for adding an animal!');
     });
-  };
+};
 
-$animalForm.addEventListener('submit', handleGetAnimalsSubmit);
+$animalForm.addEventListener('submit', handleAnimalFormSubmit);

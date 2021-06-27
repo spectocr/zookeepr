@@ -189,6 +189,15 @@
         "hungry"
       ],
       "id": "19"
+    },
+    {
+      "name": "sfdf",
+      "species": "sdfd",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "zany"
+      ],
+      "id": "20"
     }
   ]
 }
